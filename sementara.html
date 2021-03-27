@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- search button -->
+    <div>
+      <label>Masukkan Lokasi</label>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="masukkan lokasi"
+      /><br /><br />
+      <input type="submit" id="search-button" />
+    </div>
+
+    <!-- data tour result -->
+    <div id="paket-tour">
+      <!-- <div>
+        <img src="image.jpeg" alt="tour" />
+      </div>
+      <div>
+        <h1>Paket Tour</h1>
+      </div> -->
+    </div>
+
+    <!-- tour detail -->
+    <div>
+      <div class="tour-detail-content"></div>
+    </div>
+    <p hidden id="latitude"></p>
+    <p hidden id="longtitude"></p>
+    <script src="fetchData.js"></script>
+  </body>
+</html>
