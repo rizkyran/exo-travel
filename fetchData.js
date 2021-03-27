@@ -57,7 +57,9 @@ const getDataTours = () => {
     .then(function (data) {
       // Log the API data
       //console.log(data);
-      //Ambil data di element penyimpan
+      //Ambil data di element penyimpanl
+      localStorage.setItem("data", JSON.stringify(data));
+
       const latitude = document.getElementById("latitude").textContent;
       const longtitude = document.getElementById("longtitude").textContent;
       //Fetch API Tours
@@ -92,6 +94,7 @@ const getDataTours = () => {
             <a href = "#" class = "tour-button">Get Detail</a>
           </div>
         </div>
+        
       `;
       });
       tourList.innerHTML = html;
@@ -104,17 +107,23 @@ const getDataTours = () => {
 console.log(getDataTours());
 searchButton.addEventListener("click", getDataTours);
 
+const dataLocal = JSON.parse(localStorage.getItem("data"));
+console.log("datalocal", dataLocal);
 // get detail of the tour
 const tourList = document.getElementById("paket-tour");
 const getTourDetail = (e) => {
   e.preventDefault();
   console.log("coba test", e.target);
   if (e.target.classList.contains("tour-button")) {
-    let tourItem = e.target.parentElement.parentElement;
-    console.log(tourItem);
-    // masih ada blocker disini
+    // console.log(tourItem);
     fetch(
-      `https://test.api.amadeus.com/v1/shopping/activities/${tourItem.dataset.id}`
+      `https://test.api.amadeus.com/v1/shopping/activities/${dataLocal.id}`,
+      {
+        headers: {
+          Authorization: dataLocal.token_type + " " + dataLocal.access_token,
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
     )
       .then((response) => response.json())
       .then((data) => console.log(data));
