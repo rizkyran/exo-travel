@@ -18,7 +18,7 @@ Berperan sbg Travel Advisor, dimana user bisa mendapatkan rekomendasi paket wisa
 
 | Nama | Github Link |
 | ------ | ------ |
-| Ah Rifki Ubaidillah | [https://github.com/rifqi23ahmad] |
+| Ah Rifqi Ubaidillah | [https://github.com/rifqi23ahmad] |
 | Muhammad Aziz | [https://github.com/mohammedazez] |
 | Radika Yudhistira Early | [https://github.com/ardhisr1] |
 | Randhika Rizkyaldi | [https://github.com/rizkyran] |
