@@ -3,12 +3,12 @@
 
 
 ### Fungsi Utama : 
-Berperan sbg Travel Advisor, dimana user bisa mendapatkan rekomendasi destinasi wisata di kota yang diinginkan.
+Berperan sbg Travel Advisor, dimana user bisa mendapatkan rekomendasi paket wisata di kota yang diinginkan.
 
 ### MVPs :
 
-1. User dapat mencari kota yang diinginkan, lalu akan ditampilkan destinasi-destinasi wisata di kota tersebut
-2. Ketika pilihan destinasi di-klik, maka akan muncul modal yang berisi detail destinasi.
+1. User dapat mencari kota yang diinginkan, lalu akan ditampilkan paket-paket wisata di kota tersebut
+2. Ketika pilihan destinasi di-klik, maka akan muncul modal yang berisi detail paket wisata.
 
 ### APIs :
 1. https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities

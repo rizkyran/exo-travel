@@ -1,12 +1,12 @@
 // FETCH DATA LANGTITUDE AND LONGTITUDE BY CITY NAME
 const keyCity = "V-BB2svJ4ytDS3QeWyRHQh0uhMEnFOHl4Jz3qGBwgHg";
 
-//let searchCity = document.getElementById('searchCity').textContent;
-let city = "barcelona";
+var citySearch = document.getElementById('search-button').value;
+//let city = "jakarta";
 
 const getDataCity = () => {
   fetch(
-    `https://geocode.search.hereapi.com/v1/geocode?q=${city}&apikey=${keyCity}`,
+    `https://geocode.search.hereapi.com/v1/geocode?q=${citySearch}&apikey=${keyCity}`,
     {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -31,7 +31,7 @@ const getDataCity = () => {
       console.log("something went wrong", err);
     });
 };
-getDataCity();
+//getDataCity();
 
 // FETCH DATA Tours API
 const key = `5VbVSUmmfVxRiDdYJnldwaYpIhUDwnvM`;
@@ -168,6 +168,14 @@ const getDataTour = async () => {
             });
         });
       });
+    })
+    .catch(function (err) {
+        alert("Location Not Found");
     });
 };
-getDataTour();
+
+document.getElementById("search")
+.addEventListener("click",function(){
+    getDataCity();
+    getDataTour();
+})
