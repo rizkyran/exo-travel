@@ -1,81 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 body {
-    font-family: 'Poppins', sans-serif !important;
-    color: #023047 !important; 
-    background-color: #EEF7FB !important;
+  font-family: "Poppins", sans-serif !important;
+  color: #023047 !important;
+  background-color: #eef7fb !important;
 }
 
 a > i#navLogo {
-    color: #fff;
-    font-size: x-large;
+  color: #fff;
+  font-size: x-large;
 }
 
 a > span {
-    color: #fff;
-    font-size: x-large;
-    margin-left: 10px;
-    font-family: 'Fredoka One';
+  color: #fff;
+  font-size: x-large;
+  margin-left: 10px;
+  font-family: "Fredoka One";
 }
 
 div.nav-container {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 nav {
-    background-color: #023047;
+  background-color: #023047;
+}
+
+#paket-tour {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
 }
 
 div.hd-container {
-    /* width: 100%; */
-    height: 45vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('https://images.wallpapersden.com/image/download/anime-girl-near-ocean_a25maGeUmZqaraWkpJRmaGhrrWxrbQ.jpg');
-    background-size: cover;
-    margin-bottom: 25px;
-    color: white;
+  /* width: 100%; */
+  height: 45vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://images.wallpapersden.com/image/download/anime-girl-near-ocean_a25maGeUmZqaraWkpJRmaGhrrWxrbQ.jpg");
+  background-size: cover;
+  margin-bottom: 25px;
+  color: white;
 }
 
 div.hd-container > div.col-6 {
-    text-align: center;
+  text-align: center;
 }
 
 div.hd-container > div.col-6 > h1 {
-    font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", cursive;
 }
 
 div.hd-container > div.col-6 > h5 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 div.hd-container > div.col-6 > div.src-container {
-    margin-top: 25px;
-    margin-bottom: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .crd-container {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .card {
-    margin: auto;
+  margin: auto;
 }
 
 .card-title {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .btn-card {
-   background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
-   margin: 10px 0px 10px 0px;
-   padding: 10px 35px;
-   text-align: center;
-   font-weight: bolder;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;
-   border-radius: 10px;
-   display: inline-block;
-   text-decoration: none;
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
+  margin: 10px 0px 10px 0px;
+  padding: 10px 35px;
+  text-align: center;
+  font-weight: bolder;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn-card:hover {
@@ -85,6 +97,6 @@ div.hd-container > div.col-6 > div.src-container {
 }
 
 footer {
-    background-color: #023047;
-    color: white;
+  background-color: #023047;
+  color: white;
 }
