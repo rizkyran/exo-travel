@@ -39,29 +39,12 @@
           <h1 class="display-4">EXO TRAVEL</h1>
           <h5><i>The Smart Way to Travel.</i></h5>
           <div class="src-container">
-            <div class="input-group">
-              <input
-                type="text"
-                class="form-control form-control-lg"
-                placeholder="Search places... "
-                aria-label="Search"
-                id="search-button"
-              />
-              <button
-                class="btn btn-primary"
-                type="submit"
-                value="submit"
-                id="search"
-              >
+            <input type="text" class="form-control form-control-lg" placeholder="Search places... " aria-label="Search" id="search-button">
+            <div class="btn-container">
+              <button class="btn btn-primary" type="submit" value="submit" id="search">
                 <i class="fas fa-search-location"></i>
               </button>
-              <button
-                class="btn btn-danger"
-                type="button"
-                onClick="window.location.reload();"
-              >
-                Reset
-              </button>
+              <button class="btn btn-danger" type="button" onClick="window.location.reload();">Reset</button>
             </div>
           </div>
         </div>
@@ -72,7 +55,7 @@
 
     <!-- Title -->
     <div id="list-title"></div>
-
+    
     <!-- TRAVEL CARDS -->
     <div class="container">
       <div id="list-container" class="row justify-content-center crd-container">
@@ -94,7 +77,9 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Tour Info</h5>
+            <h5 class="modal-title">
+              Tour Info
+            </h5>
             <button
               type="button"
               class="btn-close"
@@ -104,7 +89,7 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col">
+              <div class="col col-sm crsl-container">
                 <div
                   id="destCarousel"
                   class="carousel slide"
@@ -187,16 +172,24 @@
               <div class="col" id="modalDesription">
                 <div class="row">
                   <!-- <marquee behavior="scroll" direction="left" scrollamount="7"> -->
-                  <h5 id="modalTitle2"></h5>
+                    <h5 id="modalTitle2"></h5>
                   <!-- </marquee> -->
+                  <div class="rating">
+                    <h6>
+                      <i class="fas fa-star fa-lg"></i>
+                      <span id="modalRating"></span>
+                    </h6>
+                  </div>
                   <div class="pricing">
-                    <h4 id="modalPrice"></h4>
-                    <h4 id="modalCurrency"></h4>
+                      <h5 id="modalPrice"></h5>
+                      <h5 id="modalCurrency"></h5>
                   </div>
                 </div>
                 <div class="row" id="inf-container">
-                  <strong>Information :</strong>
-                  <div class="row" id="tourInfo"></div>
+                  <strong id="info">Information :</strong>
+                  <p id="tourInfo">
+
+                  </p>
                 </div>
               </div>
             </div>
@@ -210,7 +203,7 @@
               Close
             </button>
             <button id="modalBooking" type="button" class="btn btn-primary">
-              Book Now
+              <b>Book Now!</b>
             </button>
           </div>
         </div>

@@ -26,12 +26,6 @@ nav {
   background-color: #023047;
 }
 
-#paket-tour {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 100px;
-}
-
 div.hd-container {
   /* width: 100%; */
   height: 100vh;
@@ -59,21 +53,29 @@ div.hd-container > div.col-6 > div.src-container {
   margin-bottom: 25px;
 }
 
-.crd-container {
-  /* margin-bottom: 50px; */
+.btn-container {
+  margin-top: 10px;
+}
+
+div.crd-container > .col {
+  margin-top: 15px;
+  margin-bottom: 15px !important;
 }
 
 .card {
   margin: auto;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .card-title {
   font-weight: 700;
   width: 100%;
-  line-height: 1.5em;
-  height: 3em;
-  white-space: normal;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -114,6 +116,16 @@ div.hd-container > div.col-6 > div.src-container {
 #modalTitle2 {
   font-weight: bold !important;
   margin-bottom: 15px;
+  margin-left: -10px;
+}
+
+.crsl-container {
+  max-width: 50% !important;
+  height: 100%;
+}
+
+div.modal-body {
+  display: flex;
 }
 
 #inf-container {
@@ -124,17 +136,87 @@ div.hd-container > div.col-6 > div.src-container {
   margin-bottom: 25px;
 }
 
-.pricing {
+#info {
+  margin-left: -10px;
+}
+
+div.pricing {
   display: flex;
-  font-weight: bold !important;
+  font-weight: 500 !important;
   align-items: baseline;
   margin-left: -10px;
 }
 
-#modalPrice {
-  margin-right: 10px;
+div.rating {
+  margin-left: -10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
+#modalPrice {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#modalCurrency {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .crsl-container {
+    display: block;
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  .btn-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  /* .card-title {
+    font-weight: 700;
+    width: 100%;
+    line-height: 1.5em;
+    height: 3em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
+
+  .btn-card {
+    width: 100%;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .modal-footer > button {
+    width: 100%;
+  }
+
+  #modalDesription {
+    margin: auto;
+    padding-top: 20px;
+    /* background-color: turquoise; */
+  }
+
+  #inf-container > #tourInfo {
+    display: block;
+    width: 1200px im !important;
+    text-align: justify;
+    padding: 0;
+    /* background-color: tomato; */
+  }
+}
 footer {
   background-color: #023047;
   color: white;
