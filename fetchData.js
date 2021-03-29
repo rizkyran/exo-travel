@@ -78,21 +78,23 @@ const getDataTour = async () => {
       let listContainer = document.getElementById("list-container");
       console.log("listContainer", listContainer);
 
+      
+
       data.data.forEach((el, index) => {
         let tourContainer = document.createElement("div");
         console.log("tourContainer", tourContainer);
 
         tourContainer.className = "col";
         tourContainer.innerHTML = `
-            <div class="card" style="width: 18rem">
+            <div class="card h-100" style="width: 18rem">
                 <img src=${el.pictures} class="card-img-top" alt="picture" />
                 <div class="card-body">
                 <h5 id="card-title" class="card-title">${el.name}</h5>
                 <p class="card-text">
-                    ${el.price.amount} ${el.price.currencyCode}
+                    <b>${el.price.amount}</b> ${el.price.currencyCode}
                 </p>
                 <hr />
-                <p>Rating : ${el.rating}</p>
+                <p><i class="fas fa-star fa-lg"></i> <b>${el.rating}</b></p>
                 <a
                     href="#"
                     class="btn-card toFormButton"
@@ -150,9 +152,10 @@ const getDataTour = async () => {
           );
           // console.log("el", detailPicture);
 
-          document.getElementById("modalTitle").innerHTML = detailName;
+          document.getElementById("modalTitle2").innerHTML = detailName;
+          
           document.getElementById(
-            "modalDesription"
+            "tourInfo"
           ).innerHTML = detailDescription;
           document.getElementById("modalPicture").src = detailPicture;
           document.getElementById("modalPicture2").src = detailPicture;
