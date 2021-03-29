@@ -199,3 +199,12 @@ document.getElementById("search").addEventListener("click", function () {
   getDataCity();
   getDataTour();
 });
+document.getElementById("search-button").addEventListener("keyup", function(e) {
+  if(e.keyCode === 13)
+  {
+    e.preventDefault;
+    getDataCity();
+    getDataTour();
+  }
+});
+
