@@ -40,11 +40,28 @@
           <h5><i>The Smart Way to Travel.</i></h5>
           <div class="src-container">
             <div class="input-group">
-              <input type="text" class="form-control form-control-lg" placeholder="Search places... " aria-label="Search" id="search-button">
-              <button class="btn btn-primary" type="submit" value="submit" id="search">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Search places... "
+                aria-label="Search"
+                id="search-button"
+              />
+              <button
+                class="btn btn-primary"
+                type="submit"
+                value="submit"
+                id="search"
+              >
                 <i class="fas fa-search-location"></i>
               </button>
-              <button class="btn btn-danger" type="button" onClick="window.location.reload();">Reset</button>
+              <button
+                class="btn btn-danger"
+                type="button"
+                onClick="window.location.reload();"
+              >
+                Reset
+              </button>
             </div>
           </div>
         </div>
@@ -52,6 +69,9 @@
       </div>
     </div>
     <!-- END HEADER -->
+
+    <!-- Title -->
+    <div id="list-title"></div>
 
     <!-- TRAVEL CARDS -->
     <div class="container">
@@ -74,9 +94,7 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">
-              Tour Info
-            </h5>
+            <h5 class="modal-title">Tour Info</h5>
             <button
               type="button"
               class="btn-close"
@@ -169,18 +187,16 @@
               <div class="col" id="modalDesription">
                 <div class="row">
                   <!-- <marquee behavior="scroll" direction="left" scrollamount="7"> -->
-                    <h5 id="modalTitle2"></h5>
+                  <h5 id="modalTitle2"></h5>
                   <!-- </marquee> -->
                   <div class="pricing">
-                      <h4 id="modalPrice"></h4>
-                      <h4 id="modalCurrency"></h4>
+                    <h4 id="modalPrice"></h4>
+                    <h4 id="modalCurrency"></h4>
                   </div>
                 </div>
                 <div class="row" id="inf-container">
                   <strong>Information :</strong>
-                  <div class="row" id="tourInfo">
-
-                  </div>
+                  <div class="row" id="tourInfo"></div>
                 </div>
               </div>
             </div>
