@@ -14,7 +14,6 @@ function showSpinner() {
 }
 
 const getDataCity = () => {
-  showSpinner();
   fetch(
     `https://geocode.search.hereapi.com/v1/geocode?q=${citySearch.value}&apikey=${keyCity}`,
     {
@@ -204,19 +203,34 @@ const getDataTour = async () => {
     });
 };
 
+const validate = () => {
+  if(document.getElementById("search-button").value === "")
+  {
+    Swal.fire(
+      "Search bar empty!",
+      "Your search bar is empty.",
+      "error"
+    ).then(() => {
+      location.reload();
+    });
+  }
+  else
+  {
+    getDataCity();
+    getDataTour();
+    showSpinner();
+  }
+}
+
 document.getElementById("search").addEventListener("click", function () {
-  getDataCity();
-  getDataTour();
+  validate();
   document.getElementById("search").hidden = true;
 });
-document
-  .getElementById("search-button")
-  .addEventListener("keyup", function (e) {
+
+document.getElementById("search-button").addEventListener("keyup", function (e) {
     if (e.keyCode === 13) {
-      e.preventDefault;
-      getDataCity();
-      getDataTour();
+      validate();
       document.getElementById("search").hidden = true;
       document.getElementById("search-button").disabled = true;
     }
-  });
+ });
