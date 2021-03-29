@@ -86,7 +86,7 @@ const getDataTour = async () => {
 
         tourContainer.className = "col";
         tourContainer.innerHTML = `
-            <div class="card h-100" style="width: 18rem">
+            <div class="card h-100" style="width: 20rem">
                 <img src=${el.pictures} class="card-img-top" alt="picture" />
                 <div class="card-body">
                 <h5 id="card-title" class="card-title">${el.name}</h5>
@@ -163,7 +163,7 @@ const getDataTour = async () => {
           document.getElementById("modalPrice").innerHTML = detailPrice;
           document.getElementById("modalCurrency").innerHTML = detailCurrency;
           document.getElementById("modalRating").innerHTML = detailRating;
-          document.getElementById("modalType").innerHTML = detailType;
+          // document.getElementById("modalType").innerHTML = detailType;
           document
             .getElementById("modalBooking")
             .addEventListener("click", function () {

@@ -86,7 +86,7 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col">
+              <div class="col crsl-container">
                 <div
                   id="destCarousel"
                   class="carousel slide"
@@ -171,16 +171,22 @@
                   <!-- <marquee behavior="scroll" direction="left" scrollamount="7"> -->
                     <h5 id="modalTitle2"></h5>
                   <!-- </marquee> -->
+                  <div class="rating">
+                    <h6>
+                      <i class="fas fa-star fa-lg"></i>
+                      <span id="modalRating"></span>
+                    </h6>
+                  </div>
                   <div class="pricing">
-                      <h4 id="modalPrice"></h4>
-                      <h4 id="modalCurrency"></h4>
+                      <h5 id="modalPrice"></h5>
+                      <h5 id="modalCurrency"></h5>
                   </div>
                 </div>
                 <div class="row" id="inf-container">
-                  <strong>Information :</strong>
-                  <div class="row" id="tourInfo">
+                  <strong id="info">Information :</strong>
+                  <p id="tourInfo">
 
-                  </div>
+                  </p>
                 </div>
               </div>
             </div>
@@ -194,7 +200,7 @@
               Close
             </button>
             <button id="modalBooking" type="button" class="btn btn-primary">
-              Book Now
+              <b>Book Now!</b>
             </button>
           </div>
         </div>
