@@ -6,6 +6,38 @@ body {
   background-color: #eef7fb !important;
 }
 
+#spinner {
+  visibility: hidden;
+  width: 80px;
+  height: 80px;
+
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spinner.show {
+  visibility: visible;
+}
+
 a > i#navLogo {
   color: #fff;
   font-size: x-large;
@@ -178,7 +210,6 @@ div.rating {
 }
 
 @media only screen and (max-width: 768px) {
-
   .crsl-container {
     display: block;
     max-width: 100% !important;
@@ -213,7 +244,7 @@ div.rating {
     display: flex;
     flex-direction: column-reverse;
   }
-  
+
   .modal-footer > button {
     width: 100%;
   }
