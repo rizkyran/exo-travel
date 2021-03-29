@@ -32,7 +32,7 @@ const getDataCity = () => {
 
       const latitude = String(cityInfo.items[0].position.lat);
       const longtitude = String(cityInfo.items[0].position.lng);
-      console.log("latitude longtitude", { latitude, longtitude });
+      // console.log("latitude longtitude", { latitude, longtitude });
 
       document.getElementById("latitude").textContent = latitude;
       document.getElementById("longtitude").textContent = longtitude;
@@ -65,7 +65,7 @@ const getDataTour = async () => {
     })
     .then(function (data) {
       // Log the API data
-      console.log("data", data);
+      // console.log("data", data);
       //Ambil data di element penyimpan
       const latitude = document.getElementById("latitude").textContent;
       const longtitude = document.getElementById("longtitude").textContent;
@@ -84,33 +84,24 @@ const getDataTour = async () => {
       return resp.json();
     })
     .then(function (data) {
-      console.log("datas", data.data);
+      // console.log("datas", data.data);
       let listContainer = document.getElementById("list-container");
-      console.log("listContainer", listContainer);
+      // console.log("listContainer", listContainer);
 
       // Show title
       let listTitle = document.getElementById("list-title");
-      console.log("listtitle", listTitle);
+      // console.log("listtitle", listTitle);
       let titleContainer = document.createElement("div");
-      console.log("titlecontainer", titleContainer);
+      // console.log("titlecontainer", titleContainer);
       titleContainer.innerHTML = `
       <h3 id="srcResult">Destinations in <i id="cityResult"> ${citySearch.value} </i></h3>
       `;
       listTitle.appendChild(titleContainer);
 
-      // Loader
-      //   let loader = ` <div class="d-flex justify-content-center loader">
-      //     <div class="spinner-border" role="status">
-      //     <span class="sr-only">Loading...</span>
-      //     </div>
-      // </div>`;
-      //   console.log("loader", loader);
-      //   document.getElementById("list-container").innerHTML = loader;
-
       // Show all data
       data.data.forEach((el, index) => {
         let tourContainer = document.createElement("div");
-        console.log("tourContainer", tourContainer);
+        // console.log("tourContainer", tourContainer);
 
         tourContainer.className = "col";
         tourContainer.innerHTML = `
@@ -137,7 +128,7 @@ const getDataTour = async () => {
         listContainer.appendChild(tourContainer);
 
         let formButton = document.getElementsByClassName("toFormButton")[index];
-        console.log("formButton", formButton);
+        // console.log("formButton", formButton);
         formButton.addEventListener("click", function () {
           localStorage.setItem("tourDataName", JSON.stringify(el.name));
           localStorage.setItem(
