@@ -1,12 +1,12 @@
 // FETCH DATA LANGTITUDE AND LONGTITUDE BY CITY NAME
 const keyCity = "V-BB2svJ4ytDS3QeWyRHQh0uhMEnFOHl4Jz3qGBwgHg";
 
-var citySearch = document.getElementById('search-button').value;
+var citySearch = document.getElementById('search-button');
 //let city = "jakarta";
 
 const getDataCity = () => {
   fetch(
-    `https://geocode.search.hereapi.com/v1/geocode?q=${citySearch}&apikey=${keyCity}`,
+    `https://geocode.search.hereapi.com/v1/geocode?q=${citySearch.value}&apikey=${keyCity}`,
     {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
