@@ -1,7 +1,7 @@
 // FETCH DATA LANGTITUDE AND LONGTITUDE BY CITY NAME
 const keyCity = "V-BB2svJ4ytDS3QeWyRHQh0uhMEnFOHl4Jz3qGBwgHg";
 
-var citySearch = document.getElementById('search-button');
+var citySearch = document.getElementById("search-button");
 //let city = "jakarta";
 
 const getDataCity = () => {
@@ -78,8 +78,26 @@ const getDataTour = async () => {
       let listContainer = document.getElementById("list-container");
       console.log("listContainer", listContainer);
 
-      
+      // Show title
+      let listTitle = document.getElementById("list-title");
+      console.log("listtitle", listTitle);
+      let titleContainer = document.createElement("div");
+      console.log("titlecontainer", titleContainer);
+      titleContainer.innerHTML = `
+      <h1>${citySearch.value}</h1>
+      `;
+      listTitle.appendChild(titleContainer);
 
+      // Loader
+      //   let loader = ` <div class="d-flex justify-content-center loader">
+      //     <div class="spinner-border" role="status">
+      //     <span class="sr-only">Loading...</span>
+      //     </div>
+      // </div>`;
+      //   console.log("loader", loader);
+      //   document.getElementById("list-container").innerHTML = loader;
+
+      // Show all data
       data.data.forEach((el, index) => {
         let tourContainer = document.createElement("div");
         console.log("tourContainer", tourContainer);
@@ -153,10 +171,8 @@ const getDataTour = async () => {
           // console.log("el", detailPicture);
 
           document.getElementById("modalTitle2").innerHTML = detailName;
-          
-          document.getElementById(
-            "tourInfo"
-          ).innerHTML = detailDescription;
+
+          document.getElementById("tourInfo").innerHTML = detailDescription;
           document.getElementById("modalPicture").src = detailPicture;
           document.getElementById("modalPicture2").src = detailPicture;
           document.getElementById("modalPicture3").src = detailPicture;
@@ -173,12 +189,11 @@ const getDataTour = async () => {
       });
     })
     .catch(function (err) {
-        alert("Location Not Found");
+      alert("Location Not Found");
     });
 };
 
-document.getElementById("search")
-.addEventListener("click",function(){
-    getDataCity();
-    getDataTour();
-})
+document.getElementById("search").addEventListener("click", function () {
+  getDataCity();
+  getDataTour();
+});
