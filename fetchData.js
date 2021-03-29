@@ -4,7 +4,17 @@ const keyCity = "V-BB2svJ4ytDS3QeWyRHQh0uhMEnFOHl4Jz3qGBwgHg";
 var citySearch = document.getElementById("search-button");
 //let city = "jakarta";
 
+let spinner = document.getElementById("spinner");
+
+function showSpinner() {
+  spinner.className = "show";
+  setTimeout(() => {
+    spinner.className = spinner.className.replace("show", "");
+  }, 5000);
+}
+
 const getDataCity = () => {
+  showSpinner();
   fetch(
     `https://geocode.search.hereapi.com/v1/geocode?q=${citySearch.value}&apikey=${keyCity}`,
     {
@@ -191,7 +201,13 @@ const getDataTour = async () => {
       });
     })
     .catch(function (err) {
-      alert("Location Not Found");
+      // alert("Location Not Found");
+      Swal.fire(
+        "Location Not Found?",
+        "data is incorrect or not found",
+        "question"
+      );
+      location.reload();
     });
 };
 
@@ -199,12 +215,12 @@ document.getElementById("search").addEventListener("click", function () {
   getDataCity();
   getDataTour();
 });
-document.getElementById("search-button").addEventListener("keyup", function(e) {
-  if(e.keyCode === 13)
-  {
-    e.preventDefault;
-    getDataCity();
-    getDataTour();
-  }
-});
-
+document
+  .getElementById("search-button")
+  .addEventListener("keyup", function (e) {
+    if (e.keyCode === 13) {
+      e.preventDefault;
+      getDataCity();
+      getDataTour();
+    }
+  });
