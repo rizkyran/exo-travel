@@ -205,6 +205,7 @@ const getDataTour = async () => {
 document.getElementById("search").addEventListener("click", function () {
   getDataCity();
   getDataTour();
+  document.getElementById("search").hidden = true;
 });
 document
   .getElementById("search-button")
@@ -213,5 +214,7 @@ document
       e.preventDefault;
       getDataCity();
       getDataTour();
+      document.getElementById("search").hidden = true;
+      document.getElementById("search-button").disabled = true;
     }
   });
