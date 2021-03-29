@@ -72,6 +72,15 @@ div.crd-container > .col {
   transform: scale(1.05);
 }
 
+#srcResult {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#srcResult > #cityResult {
+  font-weight: bold;
+}
+
 .card-title {
   font-weight: 700;
   width: 100%;
@@ -162,6 +171,12 @@ div.rating {
   font-weight: bold;
 }
 
+#inf-container > #tourInfo {
+  text-align: justify;
+  padding-left: 0;
+  padding-right: 20px;
+}
+
 @media only screen and (max-width: 768px) {
 
   .crsl-container {
@@ -210,11 +225,8 @@ div.rating {
   }
 
   #inf-container > #tourInfo {
-    display: block;
-    width: 1200px im !important;
     text-align: justify;
     padding: 0;
-    /* background-color: tomato; */
   }
 }
 footer {

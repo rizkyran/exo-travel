@@ -84,7 +84,7 @@ const getDataTour = async () => {
       let titleContainer = document.createElement("div");
       console.log("titlecontainer", titleContainer);
       titleContainer.innerHTML = `
-      <h1>${citySearch.value}</h1>
+      <h3 id="srcResult">Destinations in <i id="cityResult"> ${citySearch.value} </i></h3>
       `;
       listTitle.appendChild(titleContainer);
 
