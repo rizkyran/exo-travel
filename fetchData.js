@@ -10,7 +10,7 @@ function showSpinner() {
   spinner.className = "show";
   setTimeout(() => {
     spinner.className = spinner.className.replace("show", "");
-  }, 5000);
+  }, 3000);
 }
 
 const getDataCity = () => {
@@ -194,11 +194,13 @@ const getDataTour = async () => {
     .catch(function (err) {
       // alert("Location Not Found");
       Swal.fire(
-        "Location Not Found?",
-        "data is incorrect or not found",
-        "question"
-      );
-      location.reload();
+        "Location Not Found!",
+        "Location unavailable or check your spelling.",
+        "error"
+      ).then(() => {
+        location.reload();
+      });
+      
     });
 };
 

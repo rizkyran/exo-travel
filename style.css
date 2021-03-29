@@ -11,8 +11,8 @@ body {
   width: 80px;
   height: 80px;
 
-  border: 2px solid #f3f3f3;
-  border-top: 3px solid #f25a41;
+  border: 9px solid #f3f3f3;
+  border-top: 10px solid #0a74ee;
   border-radius: 100%;
 
   position: absolute;
@@ -22,7 +22,7 @@ body {
   right: 0;
   margin: auto;
 
-  animation: spin 1s infinite linear;
+  animation: spin .7s infinite linear;
 }
 
 @keyframes spin {
@@ -36,6 +36,7 @@ body {
 
 #spinner.show {
   visibility: visible;
+  transform: bri;
 }
 
 a > i#navLogo {
@@ -86,7 +87,12 @@ div.hd-container > div.col-6 > div.src-container {
 }
 
 .btn-container {
-  margin-top: 10px;
+  margin-top: 25px;
+}
+
+.btn-container > button {
+  transform: scale(1.5);
+  margin-right: 40px;
 }
 
 div.crd-container > .col {
@@ -220,6 +226,12 @@ div.rating {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
+  }
+
+  .btn-container > button {
+    width: 100%;
+    margin-bottom: 5px;
+    transform: scale(1);
   }
 
   .card {
