@@ -26,12 +26,6 @@ nav {
   background-color: #023047;
 }
 
-#paket-tour {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 100px;
-}
-
 div.hd-container {
   /* width: 100%; */
   height: 100vh;
@@ -59,21 +53,29 @@ div.hd-container > div.col-6 > div.src-container {
   margin-bottom: 25px;
 }
 
+.btn-container {
+  margin-top: 10px;
+}
+
 div.crd-container > .col {
-  margin-bottom: 25px !important;
+  margin-top: 15px;
+  margin-bottom: 15px !important;
 }
 
 .card {
   margin: auto;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .card-title {
   font-weight: 700;
   width: 100%;
-  line-height: 1.5em;
-  height: 3em;
-  white-space: normal;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -168,20 +170,25 @@ div.rating {
     height: auto;
   }
 
+  .btn-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .card {
-    margin-bottom: 25px !important;
     text-align: center;
   }
 
-  .card-title {
+  /* .card-title {
     font-weight: 700;
     width: 100%;
     line-height: 1.5em;
     height: 3em;
-    white-space: normal;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+  } */
 
   .btn-card {
     width: 100%;

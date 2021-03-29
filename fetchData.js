@@ -104,7 +104,9 @@ const getDataTour = async () => {
 
         tourContainer.className = "col";
         tourContainer.innerHTML = `
-            <div class="card h-100" style="width: 20rem">
+            <div class="card h-100 toFormButton" style="width: 20rem"
+            data-bs-toggle="modal"
+            data-bs-target="#destModal">
                 <img src=${el.pictures} class="card-img-top" alt="picture" />
                 <div class="card-body">
                 <h5 id="card-title" class="card-title">${el.name}</h5>
